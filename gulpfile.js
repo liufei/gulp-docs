@@ -11,3 +11,5 @@ gulp.task('deploy', function() {
   return gulp.src(files)
     .pipe(ghPages());
 });
+
+gulp.task('default', ['deploy']);
