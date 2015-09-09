@@ -2,39 +2,30 @@
 
 This is an **unofficial** site for better reading experience.
 
-* [English](http://gulpjs.org/en/)
-* [简体中文](http://gulpjs.org/zh-cn/) [@lisposter](https://github.com/lisposter/gulp-docs-zh-cn)
-
 ## Install
 
-To edit and build in local machine, run following command:
+Install gitbook-cli:
 
 ```shell
-# install gitbook-cli
 npm install -g gitbook-cli
+```
 
-# use custom version of gitbook
-gitbook versions:link 2.3.0-custom ./gitbook
+Install latest version of gitbook:
 
-# install depdencies
-cd ./gitbook
-npm install
+```shell
+gitbook versions:install latest
+```
 
-# install plugin
-cd ..
+Install plugins:
+
+```shell
 gitbook install
 ```
 
 ## Usage
 
-To start edit, run command:
+To start edit and preview, run command:
 
 ```shell
 gitbook serve
-```
-
-To start build, run command:
-
-```shell
-gitbook build
 ```
