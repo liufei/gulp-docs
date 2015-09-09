@@ -1,0 +1,16 @@
+{
+  "title": "Gulp Documentation",
+  "description": "Unofficial site for better reading experience of gulp documentation.",
+  "structure": {
+    "readme": "Introduction.md"
+  },
+  "plugins": ["ga", "sitemap"],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-36637973-3"
+    },
+    "sitemap": {
+      "hostname": "http://gulpjs.org/"
+    }
+  }
+}
