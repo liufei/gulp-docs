@@ -18,6 +18,7 @@
 * [Split tasks across multiple files](split-tasks-across-multiple-files.md)
 * [Using external config file](using-external-config-file.md)
 * [Using multiple sources in one task](using-multiple-sources-in-one-task.md)
+* [Browserify + Transforms](browserify-transforms.md)
 * [Browserify + Uglify with sourcemaps](browserify-uglify-sourcemap.md)
 * [Browserify + Globs](browserify-with-globs.md)
 * [Output both a minified and non-minified version](minified-and-non-minified.md)
