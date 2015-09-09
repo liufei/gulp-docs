@@ -1,9 +1,6 @@
 {
   "title": "Gulp Documentation",
   "description": "Unofficial site for better reading experience of gulp documentation.",
-  "structure": {
-    "readme": "Introduction.md"
-  },
   "plugins": ["ga", "sitemap"],
   "pluginsConfig": {
     "ga": {
