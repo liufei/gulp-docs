@@ -1,16 +1,16 @@
 ## gulp API docs
 
 Jump to:
-  [gulp.src](#gulpsrcglobs-options) |
-  [gulp.dest](#gulpdestpath-options) |
-  [gulp.task](#gulptaskname-deps-fn) |
-  [gulp.watch](#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb)
+  [gulp.src](#gulp-src-globs-options) |
+  [gulp.dest](#gulp-dest-path-options) |
+  [gulp.task](#gulp-task-name-deps-fn) |
+  [gulp.watch](#gulp-watch-glob-opts-tasks-or-gulp-watch-glob-opts-cb)
 
 ### gulp.src(globs[, options])
 
-Emits files matching provided glob or an array of globs. 
-Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/wearefractal/vinyl-fs) 
-that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options) 
+Emits files matching provided glob or an array of globs.
+Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/wearefractal/vinyl-fs)
+that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
 to plugins.
 
 ```javascript
@@ -75,7 +75,7 @@ gulp.src('./client/templates/*.jade')
 ```
 
 The write path is calculated by appending the file relative path to the given
-destination directory. In turn, relative paths are calculated against the file base. 
+destination directory. In turn, relative paths are calculated against the file base.
 See `gulp.src` above for more info.
 
 #### path
