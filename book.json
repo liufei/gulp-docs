@@ -1,10 +1,17 @@
 {
   "title": "Gulp Documentation",
   "description": "Unofficial site for better reading experience of gulp documentation.",
-  "plugins": ["ga", "sitemap"],
+  "plugins": ["edit-link", "ga", "github", "sitemap"],
   "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/bipedd/gulp-docs/blob/master",
+      "label": "Edit This Page"
+    },
     "ga": {
       "token": "UA-36637973-3"
+    },
+    "github": {
+      "url": "https://github.com/bipedd/gulp-docs"
     },
     "sitemap": {
       "hostname": "http://gulpjs.org/"
