@@ -5,7 +5,7 @@
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/bipedd/gulp-docs/blob/master",
-      "label": "Edit This Page"
+      "label": ""
     },
     "ga": {
       "token": "UA-36637973-3"
@@ -15,6 +15,12 @@
     },
     "sitemap": {
       "hostname": "http://gulpjs.org/"
+    }
+  },
+  "links": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false
     }
   }
 }
