@@ -1,11 +1,12 @@
 {
+  "gitbook": "2.4.x",
   "title": "Gulp Documentation",
   "description": "Unofficial site for better reading experience of gulp documentation.",
   "plugins": ["edit-link", "ga", "github", "sitemap"],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/bipedd/gulp-docs/blob/master",
-      "label": ""
+      "label": " "
     },
     "ga": {
       "token": "UA-36637973-3"
@@ -19,6 +20,7 @@
   },
   "links": {
     "sharing": {
+      "google": false,
       "facebook": false,
       "twitter": false
     }
