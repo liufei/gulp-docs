@@ -40,16 +40,16 @@ gulp.task('scripts', function() {
    var folders = getFolders(scriptsPath);
 
    var tasks = folders.map(function(folder) {
-      // concat into foldername.js
-      // write to output
-      // minify
-      // rename to folder.min.js
-      // write to output again
       return gulp.src(path.join(scriptsPath, folder, '/**/*.js'))
+        // concat into foldername.js
         .pipe(concat(folder + '.js'))
+        // write to output
         .pipe(gulp.dest(scriptsPath))
+        // minify
         .pipe(uglify())
+        // rename to folder.min.js
         .pipe(rename(folder + '.min.js'))
+        // write to output again
         .pipe(gulp.dest(scriptsPath));
    });
 
