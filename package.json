@@ -3,20 +3,12 @@
   "version": "0.0.1",
   "description": "Unofficial site for better reading experience of gulp documentation.",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-gh-pages": "^0.5.3"
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4"
   },
   "scripts": {
     "start": "gulp deploy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bipedd/gulp-docs.git"
-  },
-  "author": "biped <poticr@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bipedd/gulp-docs/issues"
-  },
-  "homepage": "https://github.com/bipedd/gulp-docs#readme"
+  "repository": "bipedd/gulp-docs"
 }
