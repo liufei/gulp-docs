@@ -44,13 +44,13 @@ gulp.task('scripts', function() {
         // concat into foldername.js
         .pipe(concat(folder + '.js'))
         // write to output
-        .pipe(gulp.dest(scriptsPath))
+        .pipe(gulp.dest(scriptsPath)) 
         // minify
-        .pipe(uglify())
+        .pipe(uglify())    
         // rename to folder.min.js
-        .pipe(rename(folder + '.min.js'))
+        .pipe(rename(folder + '.min.js')) 
         // write to output again
-        .pipe(gulp.dest(scriptsPath));
+        .pipe(gulp.dest(scriptsPath));    
    });
 
    // process all remaining files in scriptsPath root into main.js and main.min.js files

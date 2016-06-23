@@ -3,14 +3,14 @@
 Jump to:
   [gulp.src](#gulpsrcglobs-options) |
   [gulp.dest](#gulpdestpath-options) |
-  [gulp.task](#gulptaskname--deps-fn) |
+  [gulp.task](#gulptaskname--deps--fn) |
   [gulp.watch](#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb)
 
 ### gulp.src(globs[, options])
 
-Emits files matching provided glob or an array of globs. 
-Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/wearefractal/vinyl-fs) 
-that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options) 
+Emits files matching provided glob or an array of globs.
+Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/gulpjs/vinyl-fs)
+that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
 to plugins.
 
 ```javascript
@@ -35,7 +35,7 @@ A glob that begins with `!` excludes matching files from the glob results up to 
 The following expression matches `a.js` and `bad.js`:
 
     gulp.src(['client/*.js', '!client/b*.js', 'client/bad.js'])
-    
+
 
 #### options
 Type: `Object`
@@ -85,13 +85,13 @@ gulp.src('./client/templates/*.jade')
 ```
 
 The write path is calculated by appending the file relative path to the given
-destination directory. In turn, relative paths are calculated against the file base. 
+destination directory. In turn, relative paths are calculated against the file base.
 See `gulp.src` above for more info.
 
 #### path
 Type: `String` or `Function`
 
-The path (output folder) to write files to. Or a function that returns it, the function will be provided a [vinyl File instance](https://github.com/wearefractal/vinyl).
+The path (output folder) to write files to. Or a function that returns it, the function will be provided a [vinyl File instance](https://github.com/gulpjs/vinyl).
 
 #### options
 Type: `Object`
@@ -108,7 +108,7 @@ Default: `0777`
 
 Octal permission string specifying mode for any folders that need to be created for output folder.
 
-### gulp.task(name [, deps, fn])
+### gulp.task(name [, deps] [, fn])
 
 Define a task using [Orchestrator].
 
@@ -156,7 +156,7 @@ gulp.task('buildStuff', function() {
   .pipe(somePlugin())
   .pipe(someOtherPlugin())
   .pipe(gulp.dest(/*some destination*/));
-  
+
   return stream;
   });
 ```
@@ -175,6 +175,17 @@ gulp.task('jekyll', function(cb) {
   exec('jekyll build', function(err) {
     if (err) return cb(err); // return error
     cb(); // finished task
+  });
+});
+
+// use an async result in a pipe
+gulp.task('somename', function(cb) {
+  getFilesAsync(function(err, res) {
+    if (err) return cb(err);
+    var stream = gulp.src(res)
+      .pipe(minify())
+      .pipe(gulp.dest('build'))
+      .on('end', cb);
   });
 });
 ```
@@ -295,7 +306,7 @@ The callback will be passed an object, `event`, that describes the change:
 ##### event.type
 Type: `String`
 
-The type of change that occurred, either `added`, `changed` or `deleted`.
+The type of change that occurred, either `added`, `changed`, `deleted` or `renamed`.
 
 ##### event.path
 Type: `String`
@@ -306,7 +317,7 @@ The path to the file that triggered the event.
 [node-glob]: https://github.com/isaacs/node-glob
 [node-glob documentation]: https://github.com/isaacs/node-glob#options
 [node-glob syntax]: https://github.com/isaacs/node-glob
-[glob-stream]: https://github.com/wearefractal/glob-stream
+[glob-stream]: https://github.com/gulpjs/glob-stream
 [gulp-if]: https://github.com/robrich/gulp-if
 [Orchestrator]: https://github.com/robrich/orchestrator
 [glob2base]: https://github.com/wearefractal/glob2base
