@@ -1,13 +1,13 @@
 {
   "name": "gulp-docs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Unofficial site for better reading experience of gulp documentation.",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4"
   },
   "scripts": {
-    "start": "gulp deploy"
+    "deploy": "gulp deploy"
   },
   "license": "MIT",
   "repository": "bipedd/gulp-docs"
