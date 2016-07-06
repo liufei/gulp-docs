@@ -1,8 +1,8 @@
 {
-  "gitbook": "2.x",
+  "root": "./docs",
   "title": "Gulp Documentation",
   "description": "Unofficial site for better reading experience of gulp documentation.",
-  "plugins": ["edit-link", "ga", "github", "sitemap@1.0.2"],
+  "plugins": ["edit-link", "ga", "github", "sitemap"],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/bipedd/gulp-docs/blob/master",
@@ -12,7 +12,7 @@
       "token": "UA-36637973-3"
     },
     "github": {
-      "url": "https://github.com/bipedd/gulp-docs"
+      "url": "https://github.com/bipedd/gulp-docs/docs"
     },
     "sitemap": {
       "hostname": "http://gulpjs.org/"
