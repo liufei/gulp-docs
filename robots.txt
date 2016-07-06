@@ -1,6 +1,5 @@
 User-agent: *
 Sitemap: http://gulpjs.org/sitemap.xml
-Disallow: /gitbook/
 Disallow: /404.html
 Disallow: /CNAME
 Disallow: /search_index.json
