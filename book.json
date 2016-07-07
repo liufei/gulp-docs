@@ -5,14 +5,14 @@
   "plugins": ["edit-link", "ga", "github", "sitemap"],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/bipedd/gulp-docs/blob/master",
+      "base": "https://github.com/bipedd/gulp-docs/blob/master/docs",
       "label": ""
     },
     "ga": {
       "token": "UA-36637973-3"
     },
     "github": {
-      "url": "https://github.com/bipedd/gulp-docs/docs"
+      "url": "https://github.com/bipedd/gulp-docs"
     },
     "sitemap": {
       "hostname": "http://gulpjs.org/"
