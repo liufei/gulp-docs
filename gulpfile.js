@@ -39,7 +39,10 @@ gulp.task('compress', ['clean'], () => {
   }
 
   const plugins = [].concat(
+    '_book/gitbook/style.css',
     get('link[href*=gitbook-plugin]', 'href'),
+    '_book/gitbook/gitbook.js',
+    '_book/gitbook/theme.js',
     get('script[src*=gitbook-plugin]', 'src')
   )
 
@@ -49,11 +52,11 @@ gulp.task('compress', ['clean'], () => {
 
   return gulp.src(plugins, { base: '_book/gitbook' })
     .pipe(cssFilter)
-      .pipe(concat('plugins.css'))
+      .pipe(concat('bundle.css'))
       .pipe(cleanCSS())
     .pipe(cssFilter.restore)
     .pipe(jsFilter)
-      .pipe(concat('plugins.js'))
+      .pipe(concat('bundle.js'))
       .pipe(uglify())
     .pipe(jsFilter.restore)
     .pipe(gulp.dest('dist/gitbook'))
@@ -62,18 +65,17 @@ gulp.task('compress', ['clean'], () => {
 gulp.task('optimize', ['copy', 'compress'], () => {
   const remove = selector => cheerio($ => $(selector).remove())
 
-  const replace = (selector, attribute, pattern, target) => cheerio($ => {
-    const ref = $(selector)
-    const el = ref.clone()
-    el.attr(attribute, ref.attr(attribute).replace(pattern, 'plugins'))
-    el.insertAfter(ref)
+  const replace = (selector, attribute, pattern, replacement) => cheerio($ => {
+    const el = $(selector)
+    el.attr(attribute, el.attr(attribute).replace(pattern, replacement))
   })
 
   return gulp.src(['_book/**/*.html', '!_book/google*.html'])
     .pipe(remove('link[href*=gitbook-plugin]'))
-    .pipe(replace('link[href*=style]', 'href', 'style', 'head'))
+    .pipe(replace('link[href*=style]', 'href', 'style.css', 'bundle.css'))
+    .pipe(remove('script[src*=theme]'))
     .pipe(remove('script[src*=gitbook-plugin]'))
-    .pipe(replace('script[src*=theme]', 'src', 'theme', 'body'))
+    .pipe(replace('script[src*=gitbook]', 'src', 'gitbook.js', 'bundle.js'))
     .pipe(htmlmin({ collapseWhitespace: true, minifyJS: true }))
     .pipe(gulp.dest('dist'))
 })
