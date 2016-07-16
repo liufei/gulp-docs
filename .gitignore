@@ -1,3 +1,4 @@
 _book
+dist
 .publish
 node_modules
