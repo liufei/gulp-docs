@@ -54,7 +54,7 @@ Post on [StackOverflow with a #gulp tag](http://stackoverflow.com/questions/tagg
 
 All the documentation is covered by the CC0 license *(do whatever you want with it - public domain)*.
 
-[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 To the extent possible under law, [Fractal](http://wearefractal.com) has waived all copyright and related or neighboring rights to this work.
 
