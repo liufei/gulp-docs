@@ -17,9 +17,10 @@ gulp.task('clean', ['build'], () => del('dist'))
 
 gulp.task('copy', ['clean'], () => {
   const files = [
+    'CNAME',
+    'google*.html',
+    'robots.txt',
     '_book/**/*.!(html)',
-    '_book/CNAME',
-    '_book/google*.html',
     '!_book/gitbook/gitbook-plugin-*{,/*}'
   ]
 
