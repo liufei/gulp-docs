@@ -1,15 +1,9 @@
 const fs = require('fs')
 const exec = require('child_process').exec
 const del = require('del')
-const _cheerio = require('cheerio')
+const cheerio = require('cheerio')
 const gulp = require('gulp')
-const cheerio = require('gulp-cheerio')
-const cleanCSS = require('gulp-clean-css')
-const concat = require('gulp-concat')
-const filter = require('gulp-filter')
-const ghPages = require('gulp-gh-pages')
-const htmlmin = require('gulp-htmlmin')
-const uglify = require('gulp-uglify')
+const plugins = require('gulp-load-plugins')()
 
 gulp.task('build', cb => exec('gitbook build', cb))
 
@@ -30,7 +24,7 @@ gulp.task('copy', ['clean'], () => {
 
 gulp.task('compress', ['clean'], () => {
   const html = fs.readFileSync('_book/index.html')
-  const $ = _cheerio.load(html)
+  const $ = cheerio.load(html)
 
   const get = (selector, attribute) => {
     return $(selector)
@@ -39,7 +33,7 @@ gulp.task('compress', ['clean'], () => {
       .map(f => `_book/${f}`)
   }
 
-  const plugins = [].concat(
+  const files = [].concat(
     '_book/gitbook/style.css',
     get('link[href*=gitbook-plugin]', 'href'),
     '_book/gitbook/gitbook.js',
@@ -47,26 +41,28 @@ gulp.task('compress', ['clean'], () => {
     get('script[src*=gitbook-plugin]', 'src')
   )
 
-  const cssFilter = filter('**/*.css', { restore: true })
+  const cssFilter = plugins.filter('**/*.css', { restore: true })
 
-  const jsFilter = filter('**/*.js', { restore: true })
+  const jsFilter = plugins.filter('**/*.js', { restore: true })
 
-  return gulp.src(plugins, { base: '_book/gitbook' })
+  return gulp.src(files, { base: '_book/gitbook' })
     .pipe(cssFilter)
-      .pipe(concat('bundle.css'))
-      .pipe(cleanCSS())
+      .pipe(plugins.concat('bundle.css'))
+      .pipe(plugins.cleanCss())
     .pipe(cssFilter.restore)
     .pipe(jsFilter)
-      .pipe(concat('bundle.js'))
-      .pipe(uglify())
+      .pipe(plugins.concat('bundle.js'))
+      .pipe(plugins.uglify())
     .pipe(jsFilter.restore)
     .pipe(gulp.dest('dist/gitbook'))
 })
 
 gulp.task('optimize', ['copy', 'compress'], () => {
-  const remove = selector => cheerio($ => $(selector).remove())
+  const remove = selector => plugins.cheerio($ => $(selector).remove())
 
-  const replace = (selector, attribute, pattern, replacement) => cheerio($ => {
+  const replace = (
+    selector, attribute, pattern, replacement
+  ) => plugins.cheerio($ => {
     const el = $(selector)
     el.attr(attribute, el.attr(attribute).replace(pattern, replacement))
   })
@@ -77,13 +73,13 @@ gulp.task('optimize', ['copy', 'compress'], () => {
     .pipe(remove('script[src*=theme]'))
     .pipe(remove('script[src*=gitbook-plugin]'))
     .pipe(replace('script[src*=gitbook]', 'src', 'gitbook.js', 'bundle.js'))
-    .pipe(htmlmin({ collapseWhitespace: true, minifyJS: true }))
+    .pipe(plugins.htmlmin({ collapseWhitespace: true, minifyJS: true }))
     .pipe(gulp.dest('dist'))
 })
 
 gulp.task('deploy', ['optimize'], () => {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages())
+    .pipe(plugins.ghPages())
 })
 
 gulp.task('default', ['deploy'])
