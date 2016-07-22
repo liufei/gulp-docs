@@ -12,7 +12,6 @@ gulp.task('clean', ['build'], () => del('dist'))
 gulp.task('copy', ['clean'], () => {
   const files = [
     'CNAME',
-    'google*.html',
     'robots.txt',
     '_book/**/*.!(html)',
     '!_book/gitbook/gitbook-plugin-*{,/*}'
@@ -67,7 +66,7 @@ gulp.task('optimize', ['copy', 'compress'], () => {
     el.attr(attribute, el.attr(attribute).replace(pattern, replacement))
   })
 
-  return gulp.src(['_book/**/*.html', '!_book/google*.html'])
+  return gulp.src('_book/**/*.html')
     .pipe(remove('link[href*=gitbook-plugin]'))
     .pipe(replace('link[href*=style]', 'href', 'style.css', 'bundle.css'))
     .pipe(remove('script[src*=theme]'))
