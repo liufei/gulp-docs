@@ -30,3 +30,4 @@ gulp.task('default', function() {
     .pipe(concat('result.txt'))
     .pipe(gulp.dest('build'));
 });
+```
