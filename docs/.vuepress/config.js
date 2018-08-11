@@ -21,10 +21,8 @@ module.exports = {
         nav: [
           { text: 'Getting Started', link: '/getting-started' },
           { text: 'API', link: '/API' },
-          { text: 'CLI', link: '/CLI' },
+          { text: 'Recipes', link: '/recipes/' },
           { text: 'Writing a plugin', link: '/writing-a-plugin/' },
-          { text: 'FAQ', link: '/FAQ' },
-          { text: 'Recipes', link: '/recipes/' }
         ]
       },
       '/zh/': {

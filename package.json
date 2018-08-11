@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Unofficial site for better reading experience of gulp documentation.",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "start": "vuepress dev docs",
     "build": "vuepress build docs"
   },
   "devDependencies": {

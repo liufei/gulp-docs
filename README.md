@@ -8,8 +8,8 @@
 # install
 yarn
 
-# dev
-yarn dev
+# start
+yarn start
 
 # build
 yarn build
