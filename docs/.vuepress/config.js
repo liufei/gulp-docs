@@ -5,13 +5,13 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: 'Gulp Documentation',
-      description: 'Unofficial site for better reading experience.'
+      description: 'Unofficial site for better reading experience.',
     },
     '/zh/': {
       lang: 'zh-Hans',
-      title: 'Gulp Documentation',
-      description: 'Unofficial site for better reading experience.'
-    }
+      title: 'Gulp 中文文档',
+      description: '为了更好的阅读体验而创建的Gulp中文文档。',
+    },
   },
   themeConfig: {
     locales: {
@@ -23,21 +23,19 @@ module.exports = {
           { text: 'API', link: '/API' },
           { text: 'Recipes', link: '/recipes/' },
           { text: 'Writing a plugin', link: '/writing-a-plugin/' },
-        ]
+        ],
       },
       '/zh/': {
         selectText: '选择语言',
         label: '简体中文',
         nav: [
-          { text: 'Getting Started', link: '/getting-started' },
-          { text: 'API', link: '/API' },
-          { text: 'CLI', link: '/CLI' },
-          { text: 'Writing a plugin', link: '/writing-a-plugin/' },
-          { text: 'FAQ', link: '/FAQ' },
-          { text: 'Recipes', link: '/recipes/' }
-        ]
-      }
+          { text: '入门指南', link: '/zh/getting-started' },
+          { text: 'API', link: '/zh/API' },
+          { text: '秘籍', link: '/zh/recipes/' },
+          { text: '编写插件', link: '/zh/writing-a-plugin/' },
+        ],
+      },
     },
-    repo: 'bipedd/gulp-docs'
-  }
+    repo: 'bipedd/gulp-docs',
+  },
 }
