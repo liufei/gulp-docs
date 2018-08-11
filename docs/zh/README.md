@@ -5,6 +5,8 @@ layout: SimpleHome
 
 # Gulp 中文文档 <Badge text="v3.9.1" vertical="middle" />
 
+这是为了更好的阅读体验而创建的Gulp中文文档，内容由[lisposter](https://github.com/lisposter/gulp-docs-zh-cn)翻译，[欢迎贡献代码](https://github.com/bipedd/gulp-docs)
+
 - [入门指南](getting-started.md) - 如何开始使用 gulp
 - [API 文档](API.md) - 学习 gulp 的输入和输出方式
 - [CLI 文档](CLI.md) - 学习如何执行任务（task）以及如何使用一些编译工具
