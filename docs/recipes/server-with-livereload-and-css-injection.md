@@ -1,11 +1,11 @@
 # Server with live-reloading and CSS injection
 
-With [BrowserSync](http://browsersync.io) and gulp, you can easily create a development server that is accessible to any device on the same WiFi network. BrowserSync also has live-reload built in, so there's nothing else to configure.
+With [BrowserSync](https://browsersync.io) and gulp, you can easily create a development server that is accessible to any device on the same WiFi network. BrowserSync also has live-reload built in, so there's nothing else to configure.
 
-First install the module:
+First install the modules:
 
 ```sh
-$ npm install --save-dev browser-sync
+$ npm install --save-dev gulp@next browser-sync
 ```
 
 Then, considering the following file structure...
@@ -88,15 +88,15 @@ gulp.task('sass', function() {
 });
 
 // watch Sass files for changes, run the Sass preprocessor with the 'sass' task and reload
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', gulp.series('sass', function() {
   browserSync({
     server: {
       baseDir: 'app'
     }
   });
 
-  gulp.watch('app/scss/*.scss', ['sass']);
-});
+  gulp.watch('scss/*.scss', gulp.series('sass'));
+}));
 ```
 
 and including the pre-processed CSS in `index.html`:
@@ -118,5 +118,5 @@ gulp serve
 
 ## Extras
 
-- Live reload, CSS injection and scroll/form syncing works seamlessly inside of [BrowserStack](http://www.browserstack.com/) virtual machines.
+- Live reload, CSS injection and scroll/form syncing works seamlessly inside of [BrowserStack](https://www.browserstack.com/) virtual machines.
 - Set `tunnel: true` to view your local site at a public URL (complete with all BrowserSync features).

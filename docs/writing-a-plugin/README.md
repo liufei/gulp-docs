@@ -9,20 +9,20 @@ If you plan to create your own Gulp plugin, you will save time by reading the fu
 
 ## What it does
 
-### Streaming file objects
+### Streaming file objects
 
-A gulp plugin always returns a stream in [object mode](http://nodejs.org/api/stream.html#stream_object_mode) that does the following:
+A gulp plugin always returns a stream in [object mode](https://nodejs.org/api/stream.html#stream_object_mode) that does the following:
 
-1. Takes in [vinyl File objects](http://github.com/gulpjs/vinyl)
-2. Outputs [vinyl File objects](http://github.com/gulpjs/vinyl) (via `transform.push()` and/or the plugin's callback function)
+1. Takes in [vinyl File objects](https://github.com/gulpjs/vinyl)
+2. Outputs [vinyl File objects](https://github.com/gulpjs/vinyl) (via `transform.push()` and/or the plugin's callback function)
 
-These are known as [transform streams](http://nodejs.org/api/stream.html#stream_class_stream_transform_1)
+These are known as [transform streams](https://nodejs.org/api/stream.html#stream_class_stream_transform_1)
 (also sometimes called through streams).
 Transform streams are streams that are readable and writable; they manipulate objects as they're being passed through.
 
 All gulp plugins essentially boil down to this:
 ```js
-var Transform = require('transform');
+var Transform = require('stream').Transform;
 
 module.exports = function() {
   // Monkey patch Transform or create your own subclass,
@@ -44,7 +44,7 @@ module.exports = function() {
 };
 ```
 
-Many plugins use the [through2](https://github.com/rvagg/through2/) module to simplify their code:
+Alternatively you could pass your transform and flush functions to the `Transform` constructor or even extend `Transform` with ES6 classes, as described by the [Node.js docs](https://nodejs.org/docs/latest/api/stream.html#stream_implementing_a_transform_stream). However, many plugins prefer to use the [through2](https://github.com/rvagg/through2/) module to simplify their code:
 
 ```js
 var through = require('through2');    // npm install --save through2
@@ -126,7 +126,7 @@ A simple example showing how to detect & handle each form is provided below, for
 approach follow the links above.
 
 ```js
-var PluginError = require('gulp-util').PluginError;
+var PluginError = require('plugin-error');
 
 // consts
 var PLUGIN_NAME = 'gulp-example';
@@ -176,11 +176,10 @@ if (someCondition) {
 
 ## Useful resources
 
-* [File object](https://github.com/gulpjs/gulp-util/#new-fileobj)
-* [PluginError](https://github.com/gulpjs/gulp-util#new-pluginerrorpluginname-message-options)
-* [event-stream](https://github.com/dominictarr/event-stream)
-* [BufferStream](https://github.com/nfroidure/BufferStream)
-* [gulp-util](https://github.com/gulpjs/gulp-util)
+* [File object](https://github.com/gulpjs/vinyl)
+* [PluginError](https://github.com/gulpjs/plugin-error)
+* [through2](https://www.npmjs.com/package/through2)
+* [bufferstreams](https://www.npmjs.com/package/bufferstreams)
 
 
 ## Sample plugins
@@ -195,6 +194,6 @@ if (someCondition) {
 If you're unfamiliar with streams, you will need to read up on them:
 
 * https://github.com/substack/stream-handbook (a MUST read)
-* http://nodejs.org/api/stream.html
+* https://nodejs.org/api/stream.html
 
 Other libraries that are not file manipulating through streams but are made for use with gulp are tagged with the [gulpfriendly](https://npmjs.org/browse/keyword/gulpfriendly) keyword on npm.

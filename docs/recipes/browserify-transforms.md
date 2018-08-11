@@ -1,6 +1,6 @@
 # Browserify + Transforms
 
-[Browserify](http://github.com/substack/node-browserify) has become an important and indispensable
+[Browserify](https://github.com/browserify/browserify) has become an important and indispensable
 tool but requires being wrapped before working well with gulp. Below is a simple recipe for using
 Browserify with transforms.
 
@@ -13,7 +13,7 @@ var browserify = require('browserify');
 var gulp = require('gulp');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var gutil = require('gulp-util');
+var log = require('gulplog');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var reactify = require('reactify');
@@ -33,7 +33,7 @@ gulp.task('javascript', function () {
     .pipe(sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
         .pipe(uglify())
-        .on('error', gutil.log)
+        .on('error', log.error)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/js/'));
 });
