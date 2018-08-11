@@ -1,3 +1,8 @@
+---
+home: true
+layout: SimpleHome
+---
+
 # Gulp Documentation
 
 This is an **unofficial** site for better reading experience of gulp documentation.
