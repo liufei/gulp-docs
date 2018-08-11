@@ -1,15 +1,16 @@
 # Gulp Documentation
+
 > Unofficial site for better reading experience of gulp documentation.
 
 ## Getting started
+
 ```shell
 # install
-npm i -g gitbook-cli
-npm i
+yarn
 
-# preview
-gitbook serve
+# dev
+yarn dev
 
-# deploy
-npm run deploy
+# build
+yarn build
 ```
