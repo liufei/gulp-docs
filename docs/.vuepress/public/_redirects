@@ -1,3 +1,4 @@
+# Migrate to VuePress
 /getting-started  /getting-started.html
 /api  /API.html
 /cli  /CLI.html
@@ -36,3 +37,7 @@
 /recipes/run-grunt-tasks-from-gulp  /recipes/run-grunt-tasks-from-gulp.html
 /recipes/exports-as-tasks  /recipes/exports-as-tasks.html
 /recipes/rollup-with-rollup-stream  /recipes/rollup-with-rollup-stream.html
+
+# Fix Netlify URL
+/zh/cli  /zh/CLI.html
+/zh/api  /zh/API.html
