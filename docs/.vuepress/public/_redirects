@@ -1,38 +1,38 @@
-/getting-started  /getting-started.html  302
-/api  /API.html  302
-/cli  /CLI.html  302
-/writing-a-plugin/guidelines  /writing-a-plugin/guidelines.html  302
-/writing-a-plugin/using-buffers  /writing-a-plugin/using-buffers.html  302
-/writing-a-plugin/dealing-with-streams  /writing-a-plugin/dealing-with-streams.html  302
-/writing-a-plugin/testing  /writing-a-plugin/testing.html  302
-/writing-a-plugin/recommended-modules  /writing-a-plugin/recommended-modules.html  302
-/faq  /FAQ.html  302
-/recipes/automate-release-workflow  /recipes/automate-release-workflow.html  302
-/recipes/combining-streams-to-handle-errors  /recipes/combining-streams-to-handle-errors.html  302
-/recipes/delete-files-folder  /recipes/delete-files-folder.html  302
-/recipes/fast-browserify-builds-with-watchify  /recipes/fast-browserify-builds-with-watchify.html  302
-/recipes/incremental-builds-with-concatenate  /recipes/incremental-builds-with-concatenate.html  302
-/recipes/make-stream-from-buffer  /recipes/make-stream-from-buffer.html  302
-/recipes/mocha-test-runner-with-gulp  /recipes/mocha-test-runner-with-gulp.html  302
-/recipes/only-pass-through-changed-files  /recipes/only-pass-through-changed-files.html  302
-/recipes/pass-arguments-from-cli  /recipes/pass-arguments-from-cli.html  302
-/recipes/rebuild-only-files-that-change  /recipes/rebuild-only-files-that-change.html  302
-/recipes/running-task-steps-per-folder  /recipes/running-task-steps-per-folder.html  302
-/recipes/running-tasks-in-series  /recipes/running-tasks-in-series.html  302
-/recipes/server-with-livereload-and-css-injection  /recipes/server-with-livereload-and-css-injection.html  302
-/recipes/sharing-streams-with-stream-factories  /recipes/sharing-streams-with-stream-factories.html  302
-/recipes/specifying-a-cwd  /recipes/specifying-a-cwd.html  302
-/recipes/split-tasks-across-multiple-files  /recipes/split-tasks-across-multiple-files.html  302
-/recipes/using-external-config-file  /recipes/using-external-config-file.html  302
-/recipes/using-multiple-sources-in-one-task  /recipes/using-multiple-sources-in-one-task.html  302
-/recipes/browserify-transforms  /recipes/browserify-transforms.html  302
-/recipes/browserify-uglify-sourcemap  /recipes/browserify-uglify-sourcemap.html  302
-/recipes/browserify-with-globs  /recipes/browserify-with-globs.html  302
-/recipes/browserify-multiple-destination  /recipes/browserify-multiple-destination.html  302
-/recipes/minified-and-non-minified  /recipes/minified-and-non-minified.html  302
-/recipes/templating-with-swig-and-yaml-front-matter  /recipes/templating-with-swig-and-yaml-front-matter.html  302
-/recipes/handling-the-delete-event-on-watch  /recipes/handling-the-delete-event-on-watch.html  302
-/recipes/maintain-directory-structure-while-globbing  /recipes/maintain-directory-structure-while-globbing.html  302
-/recipes/run-grunt-tasks-from-gulp  /recipes/run-grunt-tasks-from-gulp.html  302
-/recipes/exports-as-tasks  /recipes/exports-as-tasks.html  302
-/recipes/rollup-with-rollup-stream  /recipes/rollup-with-rollup-stream.html  302
+/getting-started  /getting-started.html
+/api  /API.html
+/cli  /CLI.html
+/writing-a-plugin/guidelines  /writing-a-plugin/guidelines.html
+/writing-a-plugin/using-buffers  /writing-a-plugin/using-buffers.html
+/writing-a-plugin/dealing-with-streams  /writing-a-plugin/dealing-with-streams.html
+/writing-a-plugin/testing  /writing-a-plugin/testing.html
+/writing-a-plugin/recommended-modules  /writing-a-plugin/recommended-modules.html
+/faq  /FAQ.html
+/recipes/automate-release-workflow  /recipes/automate-release-workflow.html
+/recipes/combining-streams-to-handle-errors  /recipes/combining-streams-to-handle-errors.html
+/recipes/delete-files-folder  /recipes/delete-files-folder.html
+/recipes/fast-browserify-builds-with-watchify  /recipes/fast-browserify-builds-with-watchify.html
+/recipes/incremental-builds-with-concatenate  /recipes/incremental-builds-with-concatenate.html
+/recipes/make-stream-from-buffer  /recipes/make-stream-from-buffer.html
+/recipes/mocha-test-runner-with-gulp  /recipes/mocha-test-runner-with-gulp.html
+/recipes/only-pass-through-changed-files  /recipes/only-pass-through-changed-files.html
+/recipes/pass-arguments-from-cli  /recipes/pass-arguments-from-cli.html
+/recipes/rebuild-only-files-that-change  /recipes/rebuild-only-files-that-change.html
+/recipes/running-task-steps-per-folder  /recipes/running-task-steps-per-folder.html
+/recipes/running-tasks-in-series  /recipes/running-tasks-in-series.html
+/recipes/server-with-livereload-and-css-injection  /recipes/server-with-livereload-and-css-injection.html
+/recipes/sharing-streams-with-stream-factories  /recipes/sharing-streams-with-stream-factories.html
+/recipes/specifying-a-cwd  /recipes/specifying-a-cwd.html
+/recipes/split-tasks-across-multiple-files  /recipes/split-tasks-across-multiple-files.html
+/recipes/using-external-config-file  /recipes/using-external-config-file.html
+/recipes/using-multiple-sources-in-one-task  /recipes/using-multiple-sources-in-one-task.html
+/recipes/browserify-transforms  /recipes/browserify-transforms.html
+/recipes/browserify-uglify-sourcemap  /recipes/browserify-uglify-sourcemap.html
+/recipes/browserify-with-globs  /recipes/browserify-with-globs.html
+/recipes/browserify-multiple-destination  /recipes/browserify-multiple-destination.html
+/recipes/minified-and-non-minified  /recipes/minified-and-non-minified.html
+/recipes/templating-with-swig-and-yaml-front-matter  /recipes/templating-with-swig-and-yaml-front-matter.html
+/recipes/handling-the-delete-event-on-watch  /recipes/handling-the-delete-event-on-watch.html
+/recipes/maintain-directory-structure-while-globbing  /recipes/maintain-directory-structure-while-globbing.html
+/recipes/run-grunt-tasks-from-gulp  /recipes/run-grunt-tasks-from-gulp.html
+/recipes/exports-as-tasks  /recipes/exports-as-tasks.html
+/recipes/rollup-with-rollup-stream  /recipes/rollup-with-rollup-stream.html
