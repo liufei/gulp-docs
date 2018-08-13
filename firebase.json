@@ -1,0 +1,210 @@
+{
+  "hosting": {
+    "public": "docs/.vuepress/dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/getting-started",
+        "destination": "/getting-started.html",
+        "type": 301
+      },
+      {
+        "source": "/api",
+        "destination": "/API.html",
+        "type": 301
+      },
+      {
+        "source": "/cli",
+        "destination": "/CLI.html",
+        "type": 301
+      },
+      {
+        "source": "/writing-a-plugin/guidelines",
+        "destination": "/writing-a-plugin/guidelines.html",
+        "type": 301
+      },
+      {
+        "source": "/writing-a-plugin/using-buffers",
+        "destination": "/writing-a-plugin/using-buffers.html",
+        "type": 301
+      },
+      {
+        "source": "/writing-a-plugin/dealing-with-streams",
+        "destination": "/writing-a-plugin/dealing-with-streams.html",
+        "type": 301
+      },
+      {
+        "source": "/writing-a-plugin/testing",
+        "destination": "/writing-a-plugin/testing.html",
+        "type": 301
+      },
+      {
+        "source": "/writing-a-plugin/recommended-modules",
+        "destination": "/writing-a-plugin/recommended-modules.html",
+        "type": 301
+      },
+      {
+        "source": "/faq",
+        "destination": "/FAQ.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/automate-release-workflow",
+        "destination": "/recipes/automate-release-workflow.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/combining-streams-to-handle-errors",
+        "destination": "/recipes/combining-streams-to-handle-errors.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/delete-files-folder",
+        "destination": "/recipes/delete-files-folder.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/fast-browserify-builds-with-watchify",
+        "destination": "/recipes/fast-browserify-builds-with-watchify.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/incremental-builds-with-concatenate",
+        "destination": "/recipes/incremental-builds-with-concatenate.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/make-stream-from-buffer",
+        "destination": "/recipes/make-stream-from-buffer.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/mocha-test-runner-with-gulp",
+        "destination": "/recipes/mocha-test-runner-with-gulp.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/only-pass-through-changed-files",
+        "destination": "/recipes/only-pass-through-changed-files.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/pass-arguments-from-cli",
+        "destination": "/recipes/pass-arguments-from-cli.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/rebuild-only-files-that-change",
+        "destination": "/recipes/rebuild-only-files-that-change.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/running-task-steps-per-folder",
+        "destination": "/recipes/running-task-steps-per-folder.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/running-tasks-in-series",
+        "destination": "/recipes/running-tasks-in-series.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/server-with-livereload-and-css-injection",
+        "destination": "/recipes/server-with-livereload-and-css-injection.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/sharing-streams-with-stream-factories",
+        "destination": "/recipes/sharing-streams-with-stream-factories.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/specifying-a-cwd",
+        "destination": "/recipes/specifying-a-cwd.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/split-tasks-across-multiple-files",
+        "destination": "/recipes/split-tasks-across-multiple-files.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/using-external-config-file",
+        "destination": "/recipes/using-external-config-file.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/using-multiple-sources-in-one-task",
+        "destination": "/recipes/using-multiple-sources-in-one-task.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/browserify-transforms",
+        "destination": "/recipes/browserify-transforms.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/browserify-uglify-sourcemap",
+        "destination": "/recipes/browserify-uglify-sourcemap.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/browserify-with-globs",
+        "destination": "/recipes/browserify-with-globs.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/browserify-multiple-destination",
+        "destination": "/recipes/browserify-multiple-destination.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/minified-and-non-minified",
+        "destination": "/recipes/minified-and-non-minified.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/templating-with-swig-and-yaml-front-matter",
+        "destination":
+          "/recipes/templating-with-swig-and-yaml-front-matter.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/handling-the-delete-event-on-watch",
+        "destination": "/recipes/handling-the-delete-event-on-watch.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/maintain-directory-structure-while-globbing",
+        "destination":
+          "/recipes/maintain-directory-structure-while-globbing.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/run-grunt-tasks-from-gulp",
+        "destination": "/recipes/run-grunt-tasks-from-gulp.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/exports-as-tasks",
+        "destination": "/recipes/exports-as-tasks.html",
+        "type": 301
+      },
+      {
+        "source": "/recipes/rollup-with-rollup-stream",
+        "destination": "/recipes/rollup-with-rollup-stream.html",
+        "type": 301
+      },
+      {
+        "source": "/zh/cli",
+        "destination": "/zh/CLI.html",
+        "type": 301
+      },
+      {
+        "source": "/zh/api",
+        "destination": "/zh/API.html",
+        "type": 301
+      }
+    ]
+  }
+}
