@@ -23,7 +23,7 @@ gulp.task('compress', function () {
 });
 ```
 
-![pipe error](pipe-error.png)
+![pipe error](./pipe-error.png)
 
 There’s an error in one of the JavaScript files, but that error message is the
 opposite of helpful. You want to know what file and line contains the error. So
@@ -113,7 +113,7 @@ successful task completion (being called with no arguments), or a task failure
 (being called with an Error argument). Fortunately, this is the exact same
 format `pump` uses!
 
-![pump error](pump-error.png)
+![pump error](./pump-error.png)
 
 Now it’s very clear what plugin the error was from, what the error actually was,
 and from what file and line number.
