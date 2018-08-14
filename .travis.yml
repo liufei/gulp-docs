@@ -1,5 +1,7 @@
 language: node_js
 nodejs_js: "8"
+script:
+  - yarn build
 deploy:
   skip_cleanup: true
   provider: firebase
