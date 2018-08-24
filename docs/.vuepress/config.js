@@ -11,7 +11,21 @@ module.exports = {
       description: '为了更好的阅读体验而创建的Gulp中文文档。',
     },
   },
-  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }],
+    [
+      'script',
+      {
+        async: true,
+        src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      },
+    ],
+    [
+      'script',
+      null,
+      '(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-5083471427450334",enable_page_level_ads: true});',
+    ],
+  ],
   ga: 'UA-36637973-3',
   themeConfig: {
     repo: 'bipedd/gulp-docs',
