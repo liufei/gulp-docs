@@ -37,10 +37,10 @@ var merge = require('merge-stream');
 
 var config = require('./config.json');
 
-function doStuff(cfg) {
-  return gulp.src(cfg.src)
+function doStuff(config) {
+  return gulp.src(config.src)
     .pipe(uglify())
-    .pipe(gulp.dest(cfg.dest));
+    .pipe(gulp.dest(config.dest));
 }
 
 gulp.task('dry', function() {
